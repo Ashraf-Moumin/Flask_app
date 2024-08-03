@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 
-#loading the boston housing dataset
+#loading the dataset
 data = load_iris()
 
 def train():
@@ -42,9 +42,7 @@ def deploy(input):
     if not isinstance(input, (np.ndarray,list, pd.DataFrame)):
         input = np.array(input).reshape(-1,13)
     
-    #input = [float(i) for i in input]
-    #input = np.array(input).reshape(-1,1)
-
+    
     output = linear_model.predict(input)
 
 
